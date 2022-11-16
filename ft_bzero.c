@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: uclement <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 13:21:13 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/16 12:55:12 by uclement         ###   ########.fr       */
+/*   Created: 2022/11/16 13:04:14 by uclement          #+#    #+#             */
+/*   Updated: 2022/11/16 14:24:24 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlen(char *str)
+void	ft_bzero(void *str, int len)
 {
 	int	i;
+	char	*str1;
 
+	str1 = ((char *) str);
 	i = 0;
-
-	while (str[i])
+	while (i < len)
+	{
+		str1[i] = '\0';
 		i++;
-	return (i);
+	}
 }

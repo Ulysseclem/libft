@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/14 15:48:48 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:59:36 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main()
 	char c;
 	char    str1[50];
 	char    str2[50];
-	char	*str3;
+	int x;
 
 //isalnum
 	c = '8';
@@ -53,6 +53,32 @@ int	main()
 		printf("Ok\n");
 	c = '1';
 	if ((isalpha(c) && ft_isalpha(c)) == 0)
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+
+//toupper
+	c = 'a';
+	printf("\n-> toupper\n");
+	if (toupper(c) == ft_toupper(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+	c = '4';
+	if (toupper(c) == ft_toupper(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+
+//tolower
+	c = 'a';
+	printf("\n-> tolower\n");
+	if (tolower(c) == ft_tolower(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+	c = '4';
+	if (tolower(c) == ft_tolower(c))
 		printf("Ok\n");
 	else
 		printf("K-O\n");
@@ -109,7 +135,15 @@ int	main()
 		printf("Ok\n");
 	else
 		printf("K-O\n");
-	
+
+//strchr
+	printf("\n-> strchr\n");
+	x = 's';
+	strcpy(str1,"Je suis Ulysse");
+	printf("%s\n",strchr(str1,x));
+	printf("%s\n",ft_strchr(str1,x));
+
+
 //memset
 	printf("\n-> memset\n");
 	strcpy(str1,"Je suis Ulysse");
@@ -142,9 +176,45 @@ int	main()
 			printf("KO\n");
 
 //strlen
-	str3 = "ulysse";
-	printf("\n-> strlen");
-	if(strlen(str3) == ft_strlen(str3))
-		printf("ok");
+	printf("\n-> strlen\n");
+	if(strlen("test") == ft_strlen("1234"))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+	if(strlen("test") == ft_strlen("123"))
+		printf("K-O\n");
+	else
+		printf("OK\n");
+	if(strlen("") == ft_strlen(""))
+		printf("OK\n");
+	else
+		printf("K-O\n");
 
+//bzero
+
+	printf("\n-> bzero\n");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Ulyssz");
+	bzero(str1,1);
+	ft_bzero(str2,1);
+	if ((strcmp(str1,str2) == 0))
+		printf("OK\n");
+	else
+		printf("K-O\n");
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Ulyssz");
+	bzero(str1,1);
+	ft_bzero(str2,0);
+	if ((strcmp(str1,str2) == 0))
+		printf("K-O\n");
+	else
+		printf("OK\n");
+
+//memmove
+	printf("\n-> memmove\n");
+	strcpy(str1,"Ulysse");
+	strcpy(str2,"bachibouzouk");
+	memmove(str2,str1,6);
+	printf("%s",str2);
 }

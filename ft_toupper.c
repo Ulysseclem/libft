@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 13:21:13 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/16 12:55:12 by uclement         ###   ########.fr       */
+/*   Created: 2022/11/16 15:09:39 by uclement          #+#    #+#             */
+/*   Updated: 2022/11/16 15:47:33 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlen(char *str)
+int	ft_toupper(int x)
 {
-	int	i;
+	char	c;
 
-	i = 0;
-
-	while (str[i])
-		i++;
-	return (i);
+	c = ((char)x);
+	if (c >= 'a' && c <= 'z' )
+		c = c - 32;
+	else if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return ((int)c);
 }

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 13:21:13 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/16 12:55:12 by uclement         ###   ########.fr       */
+/*   Created: 2022/11/16 15:44:03 by uclement          #+#    #+#             */
+/*   Updated: 2022/11/16 15:44:37 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlen(char *str)
+int	ft_tolower(int x)
 {
-	int	i;
+	char	c;
 
-	i = 0;
-
-	while (str[i])
-		i++;
-	return (i);
+	c = ((char)x);
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return ((int)c);
 }
