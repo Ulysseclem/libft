@@ -6,14 +6,16 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/16 16:59:36 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/18 12:28:58 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <strings.h>
 #include <stdio.h>
 #include "libft.h"
 #include <ctype.h>
+#include <stddef.h>
 
 
 int	main()
@@ -57,31 +59,6 @@ int	main()
 	else
 		printf("K-O\n");
 
-//toupper
-	c = 'a';
-	printf("\n-> toupper\n");
-	if (toupper(c) == ft_toupper(c))
-		printf("Ok\n");
-	else
-		printf("K-O\n");
-	c = '4';
-	if (toupper(c) == ft_toupper(c))
-		printf("Ok\n");
-	else
-		printf("K-O\n");
-
-//tolower
-	c = 'a';
-	printf("\n-> tolower\n");
-	if (tolower(c) == ft_tolower(c))
-		printf("Ok\n");
-	else
-		printf("K-O\n");
-	c = '4';
-	if (tolower(c) == ft_tolower(c))
-		printf("Ok\n");
-	else
-		printf("K-O\n");
 
 //isascii
 	c = 'a';
@@ -136,12 +113,217 @@ int	main()
 	else
 		printf("K-O\n");
 
+//toupper
+	c = 'a';
+	printf("\n-> toupper\n");
+	if (toupper(c) == ft_toupper(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+	c = '4';
+	if (toupper(c) == ft_toupper(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+
+//tolower
+	c = 'a';
+	printf("\n-> tolower\n");
+	if (tolower(c) == ft_tolower(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+	c = '4';
+	if (tolower(c) == ft_tolower(c))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+
+
 //strchr
 	printf("\n-> strchr\n");
 	x = 's';
 	strcpy(str1,"Je suis Ulysse");
-	printf("%s\n",strchr(str1,x));
-	printf("%s\n",ft_strchr(str1,x));
+	if ((strcmp(strchr(str1,x),ft_strchr(str1,x)) == 0))
+		printf("Ok\n");
+	else
+		printf("K-O");
+	
+	x = 's';
+	strcpy(str1,"baldi");
+	if ((strchr(str1,x) == NULL && ft_strchr(str1,x) == NULL))
+		printf("Ok\n");
+	else
+		printf("K-O");
+
+	x = 's';
+	strcpy(str1,"");
+	if ((strchr(str1,x) == NULL && ft_strchr(str1,x) == NULL))
+		printf("Ok\n");
+	else
+		printf("K-O");
+
+	x = '\0';
+	strcpy(str1,"test");
+	// printf("%s",strchr(str1,x));
+	// printf("%s",ft_strchr(str1,x));
+
+	if ((strcmp(strchr(str1,x),ft_strchr(str1,x)) == 0))
+		printf("Ok\n");
+	else
+		printf("K-O");
+
+//strrchr
+	printf("\n-> strrchr\n");
+	x = 's';
+	strcpy(str1,"Je suis Ulysse");
+	if ((strcmp(strrchr(str1,x),ft_strrchr(str1,x)) == 0))
+		printf("Ok\n");
+	else
+		printf("K-O");
+	
+	x = 's';
+	strcpy(str1,"baldi");
+	if ((strrchr(str1,x) == NULL && ft_strrchr(str1,x) == NULL))
+		printf("Ok\n");
+	else
+		printf("K-O");
+
+	x = 's';
+	strcpy(str1,"");
+	if ((strrchr(str1,x) == NULL && ft_strrchr(str1,x) == NULL))
+		printf("Ok\n");
+	else
+		printf("K-O");
+
+	x = '\0';
+	strcpy(str1,"test");
+	// printf("%s",strrchr(str1,x));
+	// printf("%s",ft_strrchr(str1,x));
+
+	if ((strcmp(strrchr(str1,x),ft_strrchr(str1,x)) == 0))
+		printf("Ok\n");
+	else
+		printf("K-O");
+
+//strncmp
+
+	printf("\n-> strncmp\n");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Ulysse");
+	printf("%d\n",strncmp(str1,str2,5));
+	printf("%d\n",ft_strncmp(str1,str2,5));
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Thomas");
+	printf("%d\n",strncmp(str1,str2,5));
+	printf("%d\n",ft_strncmp(str1,str2,5));
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je toto");
+	printf("%d\n",strncmp(str1,str2,5));
+	printf("%d\n",ft_strncmp(str1,str2,5));
+
+	strcpy(str1,"Jz");
+	strcpy(str2,"Ja");
+	printf("%d\n",strncmp(str1,str2,5));
+	printf("%d\n",ft_strncmp(str1,str2,5));
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Ulysse");
+	printf("%d\n",strncmp(str1,str2,0));
+	printf("%d\n",ft_strncmp(str1,str2,0));
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Ulysse");
+	printf("%d\n",strncmp(str1,str2,45));
+	printf("%d\n",ft_strncmp(str1,str2,45));
+
+//strlen
+	printf("\n-> strlen\n");
+	if(strlen("test") == ft_strlen("1234"))
+		printf("Ok\n");
+	else
+		printf("K-O\n");
+	if(strlen("test") == ft_strlen("123"))
+		printf("K-O\n");
+	else
+		printf("OK\n");
+	if(strlen("") == ft_strlen(""))
+		printf("OK\n");
+	else
+		printf("K-O\n");
+
+//strnstr
+	printf("\n-> strnstr\n");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"suis");
+	printf("%s\n",strnstr(str1,str2,20));
+	printf("%s\n",ft_strnstr(str1,str2,20));
+
+	printf("vrai fonction :");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"test");
+	if(strnstr(str1,str2,20) != NULL)
+		printf("%s\n",strnstr(str1,str2,20));
+	else if (strnstr(str1,str2,20) == NULL)
+		printf("NULL\n");
+	else
+		printf("K-O\n");
+
+	printf("ma fonction :");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"test");
+	if(ft_strnstr(str1,str2,20) != NULL)
+		printf("%s\n",ft_strnstr(str1,str2,20));
+	else if (ft_strnstr(str1,str2,20) == NULL)
+		printf("NULL\n");
+	else
+		printf("K-O\n");
+
+
+	printf("vrai fonction :");
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"");
+	if(strnstr(str1,str2,20) != NULL)
+		printf("%s\n",strnstr(str1,str2,20));
+	else if (strnstr(str1,str2,20) == NULL)
+		printf("NULL\n");
+	else
+		printf("K-O\n");
+
+	printf("ma fonction :");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"");
+	if(ft_strnstr(str1,str2,20) != NULL)
+		printf("%s\n",ft_strnstr(str1,str2,20));
+	else if (ft_strnstr(str1,str2,20) == NULL)
+		printf("NULL\n");
+	else
+		printf("K-O\n");
+
+
+	printf("vrai fonction :");
+
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"Je suis Ulysse Clement");
+	if(strnstr(str1,str2,20) != NULL)
+		printf("%s\n",strnstr(str1,str2,20));
+	else if (strnstr(str1,str2,20) == NULL)
+		printf("NULL\n");
+	else
+		printf("K-O\n");
+
+	printf("ma fonction :");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"suis Ulysse Clement");
+	if(ft_strnstr(str1,str2,20) != NULL)
+		printf("%s\n",ft_strnstr(str1,str2,20));
+	else if (ft_strnstr(str1,str2,20) == NULL)
+		printf("NULL\n");
+	else
+		printf("K-O\n");
 
 
 //memset
@@ -175,20 +357,7 @@ int	main()
 	else
 			printf("KO\n");
 
-//strlen
-	printf("\n-> strlen\n");
-	if(strlen("test") == ft_strlen("1234"))
-		printf("Ok\n");
-	else
-		printf("K-O\n");
-	if(strlen("test") == ft_strlen("123"))
-		printf("K-O\n");
-	else
-		printf("OK\n");
-	if(strlen("") == ft_strlen(""))
-		printf("OK\n");
-	else
-		printf("K-O\n");
+
 
 //bzero
 

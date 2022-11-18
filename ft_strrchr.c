@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 16:00:27 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/18 09:25:45 by uclement         ###   ########.fr       */
+/*   Created: 2022/11/18 09:30:06 by uclement          #+#    #+#             */
+/*   Updated: 2022/11/18 09:46:53 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int		len;
 
-	i = 0;
-	while (s[i])
+	len = 0;
+	while(s[len])
+		len++;
+
+	while (len > 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i++;
+		if (s[len] == (char)c)
+			return ((char *)(s + len));
+		len--;
 	}
-	if (s[i] == c)
-		return ((char *)(s + i));
+	if (s[len] == c)
+		return ((char *)(s + len));
 	return (NULL);
 }

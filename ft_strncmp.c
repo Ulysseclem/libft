@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 16:00:27 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/18 09:25:45 by uclement         ###   ########.fr       */
+/*   Created: 2022/11/18 09:50:37 by uclement          #+#    #+#             */
+/*   Updated: 2022/11/18 10:29:59 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_strchr(const char *s, int c)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	size_t		i;
 
 	i = 0;
-	while (s[i])
+	while (s1[i] && s2[i] && i < n)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i++;
+		if (s1[i] < s2[i])
+			return(s1[i] - s2[i]);
+		else if (s1[i] > s2[i])
+			return(s1[i] - s2[i]);
+		else
+			i++;
 	}
-	if (s[i] == c)
-		return ((char *)(s + i));
-	return (NULL);
+	return (0);
 }
