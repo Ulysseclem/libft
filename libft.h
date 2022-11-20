@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:14:37 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/18 11:56:55 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/20 15:56:05 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ char	*ft_strrchr(const char *,int);
 int		ft_strncmp(const char *, const char *, size_t );
 long unsigned int ft_strlen(char*);
 char	*ft_strnstr(const char *, const char *, size_t);
-
+void	*ft_memchr(const void *, int, size_t);
 void ft_bzero(char*,int);
-
 char *strnstr(const char *, const char *, size_t);
+int		ft_memcmp(const void *, const void *, size_t);
+void	*ft_memcpy(void *, const void *, size_t);
 
 #endif

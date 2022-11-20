@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   maintest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/18 12:28:58 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/20 15:54:07 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -385,5 +385,35 @@ int	main()
 	strcpy(str1,"Ulysse");
 	strcpy(str2,"bachibouzouk");
 	memmove(str2,str1,6);
-	printf("%s",str2);
+	printf("%s\n",str2);
+
+//memchr
+	printf("\n-> memchr\n");
+	strcpy(str1,"ulysse");
+	printf("%p\n",memchr(str1,'s',6));
+	printf("%p\n",ft_memchr(str1,'s',6));
+	printf("%p\n",memchr(str1,'z',6));
+	printf("%p\n",ft_memchr(str1,'z',6));
+	printf("%p\n",memchr(str1,'s',2));
+	printf("%p\n",ft_memchr(str1,'s',2));
+	printf("%p\n",memchr(str1,'z',14));
+	printf("%p\n",ft_memchr(str1,'z',14));
+
+//memcmp
+	printf("\n-> memcmp\n");
+	printf("%d\n",memcmp("ulysse","ulysse",6));
+	printf("%d\n",ft_memcmp("ulysse","ulysse",6));
+	printf("%d\n",memcmp("ulysse","theo",6));
+	printf("%d\n",ft_memcmp("ulysse","theo",6));
+	printf("%d\n",memcmp("ulysse","zagathe",6));
+	printf("%d\n",ft_memcmp("ulysse","zagathe",6));
+
+//memcpy
+	printf("\n-> memcpy\n");
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"test");
+	printf("%p\n",memcpy(str1,str2,7));
+	strcpy(str1,"Je suis Ulysse");
+	strcpy(str2,"test");
+	printf("%p\n",ft_memcpy(str1,str2,7));
 }
