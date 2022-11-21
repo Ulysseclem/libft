@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   maintest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
+/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/20 15:54:07 by ulysse           ###   ########.fr       */
+/*   Updated: 2022/11/21 16:56:44 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include "libft.h"
 #include <ctype.h>
 #include <stddef.h>
+#include <stdlib.h>
+
 
 
 int	main()
@@ -416,4 +418,89 @@ int	main()
 	strcpy(str1,"Je suis Ulysse");
 	strcpy(str2,"test");
 	printf("%p\n",ft_memcpy(str1,str2,7));
+
+//atoi
+	printf("\n-> atoi\n");
+	printf("%d\n",atoi("123"));
+	printf("%d\n",ft_atoi("123"));
+
+	printf("%d\n",atoi("+123"));
+	printf("%d\n",ft_atoi("+123"));
+
+	printf("%d\n",atoi("-123"));
+	printf("%d\n",ft_atoi("-123"));
+
+	printf("%d\n",atoi("+-123"));
+	printf("%d\n",ft_atoi("+-123"));
+
+	printf("%d\n",atoi("12 3456465"));
+	printf("%d\n",ft_atoi("12 3456465"));
+
+	printf("%d\n",atoi("    123 "));
+	printf("%d\n",ft_atoi("    123 "));
+
+	printf("%d\n",atoi("    123 ulysse"));
+	printf("%d\n",ft_atoi("    123 ulysse"));
+
+
+	printf("%d\n",atoi("Ulysse 123"));
+	printf("%d\n",ft_atoi("Ulysse 123"));
+	
+	printf("%d\n",atoi("-\r123 "));
+	printf("%d\n",ft_atoi("-\r123 "));
+
+//strlcat
+	printf("\n-> strlcat\n");
+
+	printf("%ld\n",strlcat("ulysse","clement",6));
+		printf("%d\n",ft_strlcat("ulysse","clement",6));
+
+
+	printf("%ld\n",strlcat("ulysse","clement",2));
+		printf("%d\n",ft_strlcat("ulysse","clement",2));
+
+
+	// printf("%ld\n",strlcat("ulysse","clement",18));
+
+	printf("%ld\n",strlcat("ulysse","test",6));
+	printf("%d\n",ft_strlcat("ulysse","test",6));
+
+
+	printf("%ld\n",strlcat("ulysse","",6));
+	printf("%d\n",ft_strlcat("ulysse","",6));
+
+//strlcpy
+	printf("\n-> strlcpy\n");
+	char buffer[50];
+	
+	printf("%ld\n",strlcpy(buffer,"clement",6));
+	printf("%ld\n",ft_strlcpy(buffer,"clement",6));
+
+
+	printf("%ld\n",strlcpy(buffer,"clement",2));
+	printf("%ld\n",ft_strlcpy(buffer,"clement",2));
+
+
+	// printf("%ld\n",strlcat("ulysse","clement",18));
+
+	printf("%ld\n",strlcpy(buffer,"test",6));
+	printf("%ld\n",ft_strlcpy(buffer,"test",6));
+
+
+	printf("%ld\n",strlcpy(buffer,"",6));
+	printf("%ld\n",ft_strlcpy(buffer,"",6));
+
+//calloc
+	printf("\n-> calloc\n");
+
+	char *p = ft_calloc(2, 2);
+	char z[] = {0, 0, 0, 0};
+	printf("%d\n",memcmp(p, z, 4));
+
+//strdup
+	printf("\n-> strdup\n");
+	printf("%s\n",strdup("123"));
+	printf("%s\n",ft_strdup("123"));
+	printf("%s\n",strdup(""));
+	printf("%s\n",ft_strdup(""));
 }

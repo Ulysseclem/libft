@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
+/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:14:37 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/20 15:56:05 by ulysse           ###   ########.fr       */
+/*   Updated: 2022/11/21 16:54:54 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIB_FT
 #define LIB_FT
 
+# include <string.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 int	ft_isalnum(char);
 int ft_isalpha(char);
@@ -29,8 +32,19 @@ long unsigned int ft_strlen(char*);
 char	*ft_strnstr(const char *, const char *, size_t);
 void	*ft_memchr(const void *, int, size_t);
 void ft_bzero(char*,int);
-char *strnstr(const char *, const char *, size_t);
 int		ft_memcmp(const void *, const void *, size_t);
 void	*ft_memcpy(void *, const void *, size_t);
+int ft_atoi(const char*);
+int ft_strlcat(char *, const char *, size_t);
+size_t	ft_strlcpy(char *, const char *, size_t);
+void	*ft_calloc(size_t, size_t);
+char	*ft_strdup(const char *);
+
+
+char *strnstr(const char *, const char *, size_t);
+size_t strlcat(char *, const char *, size_t);
+size_t	strlcpy(char *, const char *, size_t);
+
+
 
 #endif
