@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 10:54:02 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/18 12:29:11 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:03:54 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t		j;
 
 	i = 0;
-	if (!little[i])
+	if (!little[i] || len == 0)
 		return ((char *) big);
 	while (big[i] && len > i)
 	{

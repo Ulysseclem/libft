@@ -6,13 +6,13 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:02:29 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/14 14:59:17 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:15:21 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
-	if (c >= '0' || c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	else
 		return (0);

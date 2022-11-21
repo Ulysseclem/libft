@@ -6,18 +6,14 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:09:39 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/16 15:47:33 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:27:01 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_toupper(int x)
 {
-	char	c;
 
-	c = ((char)x);
-	if (c >= 'a' && c <= 'z' )
-		c = c - 32;
-	else if (c >= 'A' && c <= 'Z')
-		c = c + 32;
-	return ((int)c);
+	if (x >= 'a' && x <= 'z' )
+		x = x - 32;
+	return (x);
 }

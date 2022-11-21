@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uclement <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:42:47 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/09 09:47:36 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:18:29 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	if (((c < 'a' || c > 'z') && (c < 'A' || c > 'Z')) && ((c < '0') || (c > '9')))
 		return (0);

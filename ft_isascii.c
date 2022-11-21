@@ -6,14 +6,14 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:48:16 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/14 15:27:43 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:24:04 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(unsigned char c)
+int	ft_isascii(int c)
 {
-	if (c >= 0x80)
-		return (0);
-	else
+	if ((unsigned int)c <= 127)
 		return (1);
+	else
+		return (0);
 }
