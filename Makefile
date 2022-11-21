@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
+#    By: uclement <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2022/11/21 17:07:40 by uclement         ###   ########.fr        #
+#    Updated: 2022/11/14 12:26:40 by uclement         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = testeur
 
 SRC = $(wildcard *.c)
 
@@ -30,7 +30,7 @@ clean:
 	rm -f $(OBJS)
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)	
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
 
 fclean : clean
 	rm -f $(NAME)
