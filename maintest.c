@@ -6,7 +6,7 @@
 /*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/24 16:02:58 by ulysse           ###   ########.fr       */
+/*   Updated: 2022/11/24 16:23:51 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -493,7 +493,7 @@ int	main()
 //calloc
 	printf("\n-> calloc\n");
 
-	char *p = ft_calloc(2, 2);
+	char *p = ft_calloc(0, 2);
 	char z[] = {0, 0, 0, 0};
 	printf("%d\n",memcmp(p, z, 4));
 
@@ -503,14 +503,4 @@ int	main()
 	printf("%s\n",ft_strdup("123"));
 	printf("%s\n",strdup(""));
 	printf("%s\n",ft_strdup(""));
-
-
-	printf("\n-> strnstr\n");
-
-	strcpy(str2,"MZIRIBMZE");
-		printf("%s\n",ft_strnstr("MZIRIBMZIRIBMZE123",str2,9));
-		if(strnstr("MZIRIBMZIRIBMZE123",str2,strlen(str2)) == NULL)
-			printf("NULL");
-		
-	// printf("%s\n",ft_strnstr("Je suis Ulysse","x",20));
 }
