@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:59:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/21 15:04:07 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/22 16:50:39 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	while (src[size_src])
 		size_src++;
 	i = 0;
+	if (size == 0)
+		return (size_src);
 	if (size > 0)
 	{
 		while (src[i] && i < (size -1))

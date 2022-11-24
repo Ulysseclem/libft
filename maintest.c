@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   maintest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/21 16:56:44 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/24 16:02:58 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -452,43 +452,43 @@ int	main()
 //strlcat
 	printf("\n-> strlcat\n");
 
-	printf("%ld\n",strlcat("ulysse","clement",6));
-		printf("%d\n",ft_strlcat("ulysse","clement",6));
+	// printf("%ld\n",strlcat("ulysse","clement",6));
+	// 	printf("%d\n",ft_strlcat("ulysse","clement",6));
 
 
-	printf("%ld\n",strlcat("ulysse","clement",2));
-		printf("%d\n",ft_strlcat("ulysse","clement",2));
+	// printf("%ld\n",strlcat("ulysse","clement",2));
+	// 	printf("%d\n",ft_strlcat("ulysse","clement",2));
 
 
 	// printf("%ld\n",strlcat("ulysse","clement",18));
 
-	printf("%ld\n",strlcat("ulysse","test",6));
-	printf("%d\n",ft_strlcat("ulysse","test",6));
+	printf("%ld\n",strlcat(NULL,"",0));
+	printf("%d\n",ft_strlcat(NULL,"",0));
 
 
-	printf("%ld\n",strlcat("ulysse","",6));
-	printf("%d\n",ft_strlcat("ulysse","",6));
+	// printf("%ld\n",strlcat("ulysse","",6));
+	// printf("%d\n",ft_strlcat("ulysse","",6));
 
 //strlcpy
 	printf("\n-> strlcpy\n");
 	char buffer[50];
 	
-	printf("%ld\n",strlcpy(buffer,"clement",6));
-	printf("%ld\n",ft_strlcpy(buffer,"clement",6));
-
-
-	printf("%ld\n",strlcpy(buffer,"clement",2));
-	printf("%ld\n",ft_strlcpy(buffer,"clement",2));
-
-
-	// printf("%ld\n",strlcat("ulysse","clement",18));
-
-	printf("%ld\n",strlcpy(buffer,"test",6));
-	printf("%ld\n",ft_strlcpy(buffer,"test",6));
-
-
 	printf("%ld\n",strlcpy(buffer,"",6));
 	printf("%ld\n",ft_strlcpy(buffer,"",6));
+
+
+	// printf("%ld\n",strlcpy(buffer,"clement",2));
+	// printf("%ld\n",ft_strlcpy(buffer,"clement",2));
+
+
+	// // printf("%ld\n",strlcat("ulysse","clement",18));
+
+	// printf("%ld\n",strlcpy(buffer,"test",6));
+	// printf("%ld\n",ft_strlcpy(buffer,"test",6));
+
+
+	// printf("%ld\n",strlcpy(buffer,"",6));
+	// printf("%ld\n",ft_strlcpy(buffer,"",6));
 
 //calloc
 	printf("\n-> calloc\n");
@@ -503,4 +503,14 @@ int	main()
 	printf("%s\n",ft_strdup("123"));
 	printf("%s\n",strdup(""));
 	printf("%s\n",ft_strdup(""));
+
+
+	printf("\n-> strnstr\n");
+
+	strcpy(str2,"MZIRIBMZE");
+		printf("%s\n",ft_strnstr("MZIRIBMZIRIBMZE123",str2,9));
+		if(strnstr("MZIRIBMZIRIBMZE123",str2,strlen(str2)) == NULL)
+			printf("NULL");
+		
+	// printf("%s\n",ft_strnstr("Je suis Ulysse","x",20));
 }
