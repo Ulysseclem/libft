@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:14:37 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/21 17:07:33 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/28 14:55:02 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int ft_memset(char*,int,int);
 char	*ft_strchr(char *,int);
 char	*ft_strrchr(const char *,int);
 int		ft_strncmp(const char *, const char *, size_t );
-long unsigned int ft_strlen(char*);
+size_t ft_strlen(const char *);
 char	*ft_strnstr(const char *, const char *, size_t);
 void	*ft_memchr(const void *, int, size_t);
 void ft_bzero(char*,int);
@@ -39,6 +39,9 @@ int ft_strlcat(char *, const char *, size_t);
 size_t	ft_strlcpy(char *, const char *, size_t);
 void	*ft_calloc(size_t, size_t);
 char	*ft_strdup(const char *);
+char	*ft_strtrim(char const *, char const *);
+char    **ft_split(char const *, char );
+
 
 
 char *strnstr(const char *, const char *, size_t);

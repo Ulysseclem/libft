@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   maintest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
+/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/24 16:23:51 by ulysse           ###   ########.fr       */
+/*   Updated: 2022/11/28 15:34:42 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -503,4 +503,28 @@ int	main()
 	printf("%s\n",ft_strdup("123"));
 	printf("%s\n",strdup(""));
 	printf("%s\n",ft_strdup(""));
+
+//strdup
+	printf("\n-> strdup\n");
+	printf("%s\n",strdup("123"));
+	printf("%s\n",ft_strdup("123"));
+	printf("%s\n",strdup(""));
+	printf("%s\n",ft_strdup(""));
+
+//strtrim
+	printf("\n-> strtrim\n");
+	printf("%s\n",ft_strtrim("123test123","123"));
+	printf("%s\n",ft_strtrim("",""));
+
+//Split
+	printf("\n-> split\n");
+	int i = 0;
+	char **tab;
+		
+	tab = ft_split("split  ||this|for|me||f|||!|", '|');
+	while (i < 4)
+	{
+		printf("string %d : %s\n", i, tab[i]);
+		i++;
+	}
 }

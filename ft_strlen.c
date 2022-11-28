@@ -6,17 +6,18 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:21:13 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/16 12:55:12 by uclement         ###   ########.fr       */
+/*   Updated: 2022/11/28 12:41:02 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long unsigned int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 
 	i = 0;
-
-	while (str[i])
+	while (s[i])
 		i++;
 	return (i);
 }

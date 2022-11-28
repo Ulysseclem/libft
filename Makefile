@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+         #
+#    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2022/11/21 22:21:43 by ulysse           ###   ########.fr        #
+#    Updated: 2022/11/28 10:33:17 by uclement         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) libft.h
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 
