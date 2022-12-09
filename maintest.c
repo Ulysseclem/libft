@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   maintest.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
+/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/28 20:44:19 by ulysse           ###   ########.fr       */
+/*   Updated: 2022/12/09 14:11:04 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -256,76 +256,76 @@ int	main()
 	else
 		printf("K-O\n");
 
-//strnstr
-	printf("\n-> strnstr\n");
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"suis");
-	printf("%s\n",strnstr(str1,str2,20));
-	printf("%s\n",ft_strnstr(str1,str2,20));
+// //strnstr
+// 	printf("\n-> strnstr\n");
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"suis");
+// 	printf("%s\n",strnstr(str1,str2,20));
+// 	printf("%s\n",ft_strnstr(str1,str2,20));
 
-	printf("vrai fonction :");
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"test");
-	if(strnstr(str1,str2,20) != NULL)
-		printf("%s\n",strnstr(str1,str2,20));
-	else if (strnstr(str1,str2,20) == NULL)
-		printf("NULL\n");
-	else
-		printf("K-O\n");
+// 	printf("vrai fonction :");
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"test");
+// 	if(strnstr(str1,str2,20) != NULL)
+// 		printf("%s\n",strnstr(str1,str2,20));
+// 	else if (strnstr(str1,str2,20) == NULL)
+// 		printf("NULL\n");
+// 	else
+// 		printf("K-O\n");
 
-	printf("ma fonction :");
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"test");
-	if(ft_strnstr(str1,str2,20) != NULL)
-		printf("%s\n",ft_strnstr(str1,str2,20));
-	else if (ft_strnstr(str1,str2,20) == NULL)
-		printf("NULL\n");
-	else
-		printf("K-O\n");
-
-
-	printf("vrai fonction :");
-
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"");
-	if(strnstr(str1,str2,20) != NULL)
-		printf("%s\n",strnstr(str1,str2,20));
-	else if (strnstr(str1,str2,20) == NULL)
-		printf("NULL\n");
-	else
-		printf("K-O\n");
-
-	printf("ma fonction :");
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"");
-	if(ft_strnstr(str1,str2,20) != NULL)
-		printf("%s\n",ft_strnstr(str1,str2,20));
-	else if (ft_strnstr(str1,str2,20) == NULL)
-		printf("NULL\n");
-	else
-		printf("K-O\n");
+// 	printf("ma fonction :");
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"test");
+// 	if(ft_strnstr(str1,str2,20) != NULL)
+// 		printf("%s\n",ft_strnstr(str1,str2,20));
+// 	else if (ft_strnstr(str1,str2,20) == NULL)
+// 		printf("NULL\n");
+// 	else
+// 		printf("K-O\n");
 
 
-	printf("vrai fonction :");
+// 	printf("vrai fonction :");
 
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"Je suis Ulysse Clement");
-	if(strnstr(str1,str2,20) != NULL)
-		printf("%s\n",strnstr(str1,str2,20));
-	else if (strnstr(str1,str2,20) == NULL)
-		printf("NULL\n");
-	else
-		printf("K-O\n");
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"");
+// 	if(strnstr(str1,str2,20) != NULL)
+// 		printf("%s\n",strnstr(str1,str2,20));
+// 	else if (strnstr(str1,str2,20) == NULL)
+// 		printf("NULL\n");
+// 	else
+// 		printf("K-O\n");
 
-	printf("ma fonction :");
-	strcpy(str1,"Je suis Ulysse");
-	strcpy(str2,"suis Ulysse Clement");
-	if(ft_strnstr(str1,str2,20) != NULL)
-		printf("%s\n",ft_strnstr(str1,str2,20));
-	else if (ft_strnstr(str1,str2,20) == NULL)
-		printf("NULL\n");
-	else
-		printf("K-O\n");
+// 	printf("ma fonction :");
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"");
+// 	if(ft_strnstr(str1,str2,20) != NULL)
+// 		printf("%s\n",ft_strnstr(str1,str2,20));
+// 	else if (ft_strnstr(str1,str2,20) == NULL)
+// 		printf("NULL\n");
+// 	else
+// 		printf("K-O\n");
+
+
+// 	printf("vrai fonction :");
+
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"Je suis Ulysse Clement");
+// 	if(strnstr(str1,str2,20) != NULL)
+// 		printf("%s\n",strnstr(str1,str2,20));
+// 	else if (strnstr(str1,str2,20) == NULL)
+// 		printf("NULL\n");
+// 	else
+// 		printf("K-O\n");
+
+// 	printf("ma fonction :");
+// 	strcpy(str1,"Je suis Ulysse");
+// 	strcpy(str2,"suis Ulysse Clement");
+// 	if(ft_strnstr(str1,str2,20) != NULL)
+// 		printf("%s\n",ft_strnstr(str1,str2,20));
+// 	else if (ft_strnstr(str1,str2,20) == NULL)
+// 		printf("NULL\n");
+// 	else
+// 		printf("K-O\n");
 
 
 //memset
@@ -449,46 +449,46 @@ int	main()
 	printf("%d\n",atoi("-\r123 "));
 	printf("%d\n",ft_atoi("-\r123 "));
 
-//strlcat
-	printf("\n-> strlcat\n");
+// //strlcat
+// 	printf("\n-> strlcat\n");
 
-	// printf("%ld\n",strlcat("ulysse","clement",6));
-	// 	printf("%d\n",ft_strlcat("ulysse","clement",6));
-
-
-	// printf("%ld\n",strlcat("ulysse","clement",2));
-	// 	printf("%d\n",ft_strlcat("ulysse","clement",2));
+// 	// printf("%ld\n",strlcat("ulysse","clement",6));
+// 	// 	printf("%d\n",ft_strlcat("ulysse","clement",6));
 
 
-	// printf("%ld\n",strlcat("ulysse","clement",18));
-
-	printf("%ld\n",strlcat(NULL,"",0));
-	printf("%d\n",ft_strlcat(NULL,"",0));
+// 	// printf("%ld\n",strlcat("ulysse","clement",2));
+// 	// 	printf("%d\n",ft_strlcat("ulysse","clement",2));
 
 
-	// printf("%ld\n",strlcat("ulysse","",6));
-	// printf("%d\n",ft_strlcat("ulysse","",6));
+// 	// printf("%ld\n",strlcat("ulysse","clement",18));
 
-//strlcpy
-	printf("\n-> strlcpy\n");
-	char buffer[50];
+// 	printf("%ld\n",strlcat(NULL,"",0));
+// 	printf("%d\n",ft_strlcat(NULL,"",0));
+
+
+// 	// printf("%ld\n",strlcat("ulysse","",6));
+// 	// printf("%d\n",ft_strlcat("ulysse","",6));
+
+// //strlcpy
+// 	printf("\n-> strlcpy\n");
+// 	char buffer[50];
 	
-	printf("%ld\n",strlcpy(buffer,"",6));
-	printf("%ld\n",ft_strlcpy(buffer,"",6));
+// 	printf("%ld\n",strlcpy(buffer,"",6));
+// 	printf("%ld\n",ft_strlcpy(buffer,"",6));
 
 
-	// printf("%ld\n",strlcpy(buffer,"clement",2));
-	// printf("%ld\n",ft_strlcpy(buffer,"clement",2));
+// 	// printf("%ld\n",strlcpy(buffer,"clement",2));
+// 	// printf("%ld\n",ft_strlcpy(buffer,"clement",2));
 
 
-	// // printf("%ld\n",strlcat("ulysse","clement",18));
+// 	// // printf("%ld\n",strlcat("ulysse","clement",18));
 
-	// printf("%ld\n",strlcpy(buffer,"test",6));
-	// printf("%ld\n",ft_strlcpy(buffer,"test",6));
+// 	// printf("%ld\n",strlcpy(buffer,"test",6));
+// 	// printf("%ld\n",ft_strlcpy(buffer,"test",6));
 
 
-	// printf("%ld\n",strlcpy(buffer,"",6));
-	// printf("%ld\n",ft_strlcpy(buffer,"",6));
+// 	// printf("%ld\n",strlcpy(buffer,"",6));
+// 	// printf("%ld\n",ft_strlcpy(buffer,"",6));
 
 //calloc
 	printf("\n-> calloc\n");
@@ -521,8 +521,8 @@ int	main()
 	int i = 0;
 	char **tab;
 		
-	tab = ft_split("split  ||this|for|me||||||", '|');
-	while (i < 4)
+	tab = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+	while (i < 25)
 	{
 		printf("string %d : %s\n", i, tab[i]);
 		i++;

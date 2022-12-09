@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 13:45:33 by ulysse            #+#    #+#             */
-/*   Updated: 2022/11/28 09:51:21 by uclement         ###   ########.fr       */
+/*   Updated: 2022/12/09 12:39:05 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (ft_strlen((char *)s) < start)
 	{
-		if (!(str = malloc(sizeof(char) * 1)))
+		str = malloc(sizeof(char) * 1);
+		if (!str)
 			return (NULL);
 		str[0] = '\0';
 		return (str);
 	}
-
 	str = malloc((sizeof (char)) * (len + 1));
 	if (!str)
 		return (NULL);

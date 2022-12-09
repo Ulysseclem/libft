@@ -6,13 +6,13 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:48:16 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/21 17:24:04 by uclement         ###   ########.fr       */
+/*   Updated: 2022/12/09 14:27:27 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if ((unsigned int)c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	else
 		return (0);

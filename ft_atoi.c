@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:40:15 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/28 10:33:58 by uclement         ###   ########.fr       */
+/*   Updated: 2022/12/09 11:51:26 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_atoi(const char*nptr)
 			neg = -1;
 		i++;
 	}
-
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		num = num * 10 + (nptr[i] - 48);

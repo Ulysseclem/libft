@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:43:36 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/28 15:37:17 by uclement         ###   ########.fr       */
+/*   Updated: 2022/12/09 14:35:19 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,20 @@ static int	sep(char str, char c)
 		return (0);
 }
 
-static int	counting(char const *s, char c)
+static int	counting(const char *s, char c)
 {
-	int		i;
-	int		count;
+	int	i;
+	int	count;
 
-	count = 0;
 	i = 0;
+	count = 0;
 	while (s[i])
 	{
-		if (sep(s[i], c) == sep(s[i +1], c))
+		while (s[i] == c && s[i])
 			i++;
-		else if (sep(s[i], c) == 1)
-		{
+		if (s[i])
 			count++;
-			i++;
-		}
-		else
+		while (s[i] != c && s[i])
 			i++;
 	}
 	return (count);
@@ -74,12 +71,12 @@ char	**ft_split(char const *s, char c)
 	start = 0;
 	x = 0;
 	i = 0;
-
-	count = counting(s, c) + 1;
-	printf("%d \n", count);
-
-	tab = malloc(sizeof(char *) * count);
-	while (x < count && s[i])
+	count = counting(s, c);
+	tab = malloc(sizeof(char *) * count + 1);
+		if (!tab)
+		return (NULL);
+	tab[count] = NULL;
+	while (x < count)
 	{
 		while (sep(s[i], c) == 1)
 			i++;
