@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:14:37 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 13:26:01 by uclement         ###   ########.fr       */
+/*   Updated: 2022/12/12 09:42:12 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	*ft_calloc(size_t, size_t);
 char	*ft_strdup(const char *);
 char	*ft_strtrim(char const *, char const *);
 char    **ft_split(char const *, char );
+char	*ft_itoa(int);
 
 
 #endif

@@ -6,7 +6,7 @@
 #    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2022/12/09 14:14:46 by uclement         ###   ########.fr        #
+#    Updated: 2022/12/12 10:26:14 by uclement         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRC = ./ft_isalpha.c \
 			./ft_strjoin.c \
 			./ft_split.c \
 			./ft_strtrim.c \
+			./ft_itoa.c \
 			./maintest.c \
 
 OBJS = $(SRC:%.c=%.o)
