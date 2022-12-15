@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
+#    By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2022/12/12 10:26:14 by uclement         ###   ########.fr        #
+#    Updated: 2022/12/15 14:27:15 by ulysse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,10 @@ SRC = ./ft_isalpha.c \
 			./ft_split.c \
 			./ft_strtrim.c \
 			./ft_itoa.c \
+			./ft_putchar_fd.c \
+			./ft_putstr_fd.c \
+			./ft_putendl_fd.c \
+			./ft_putnbr_fd.c \
 			./maintest.c \
 
 OBJS = $(SRC:%.c=%.o)
