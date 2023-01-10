@@ -6,7 +6,7 @@
 /*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:14:37 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/15 14:26:36 by ulysse           ###   ########.fr       */
+/*   Updated: 2022/12/15 16:11:13 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void	ft_putchar_fd(char , int);
 void	ft_putstr_fd(char *, int);
 void	ft_putendl_fd(char *, int);
 void	ft_putnbr_fd(int, int);
+char	*ft_strmapi(char const *, char (*)(unsigned int, char));
+void	ft_striteri(char *, void (*)(unsigned int, char*));
 
 
 

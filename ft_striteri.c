@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 17:05:54 by ulysse            #+#    #+#             */
-/*   Updated: 2022/12/15 14:33:18 by ulysse           ###   ########.fr       */
+/*   Created: 2022/12/15 15:08:02 by ulysse            #+#    #+#             */
+/*   Updated: 2022/12/15 16:13:06 by ulysse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char		nb;
-	long int	ln;
+	int i;
 
-	ln = (long int) n;
-	if (ln < 0)
+	if (!s || !f)
+		return;
+	i = 0;
+	while (s[i])
 	{
-		write(fd, "-", 1);
-		ln *= -1;
-	}
-	if (ln >= 10)
-	{
-		nb = ln % 10 + '0';
-		ft_putnbr_fd(ln / 10, fd);
-		write (fd, &nb, 1);
-	}
-	else
-	{
-		ln = ln + '0';
-		write(fd, &ln, 1);
+		f(i, s + i);
+		i++;
 	}
 }
-// int main ()
-// {
-// 	ft_putnbr_fd(-2147483648);
-// }
