@@ -6,13 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 15:21:43 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 11:41:45 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:38:36 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

@@ -6,11 +6,10 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:37:26 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/12 11:05:47 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:38:43 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static char	*ft_rev(char *str)

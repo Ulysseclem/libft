@@ -6,14 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 13:45:33 by ulysse            #+#    #+#             */
-/*   Updated: 2022/12/09 12:39:05 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:38:10 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

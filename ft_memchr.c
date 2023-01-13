@@ -6,11 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 14:24:49 by ulysse            #+#    #+#             */
-/*   Updated: 2022/12/09 11:43:26 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:36:48 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

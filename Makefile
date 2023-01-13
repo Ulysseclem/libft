@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+         #
+#    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2022/12/15 16:26:46 by ulysse           ###   ########.fr        #
+#    Updated: 2023/01/13 17:18:09 by uclement         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,11 +46,21 @@ SRC = ./ft_isalpha.c \
 			./ft_putnbr_fd.c \
 			./ft_strmapi.c \
 			./ft_striteri.c \
-			./maintest.c \
 
 OBJS = $(SRC:%.c=%.o)
 
-# MAIN = libft.a
+BONUS = 	./ft_lstnew.c \
+			./ft_lstadd_front.c \
+			./ft_lstsize.c \
+			./ft_lstlast.c \
+			./ft_lstadd_back.c \
+			./ft_lstdelone.c \
+			./ft_lstclear.c \
+			./ft_lstiter.c \
+			./ft_lstmap.c \
+
+
+BONUS_O = $(BONUS:%.c=%.o)
 
 CC = gcc
 
@@ -65,11 +75,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
-# $(NAME): $(MAIN) $(OBJS)
-# 	gcc $(FLAGS) -o $@ $^
+bonus: $(BONUS_O)
+	ar -rcs $(NAME) $(BONUS_O)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_O)
 
 fclean : clean
 	rm -f $(NAME)

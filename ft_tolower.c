@@ -6,9 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 15:44:03 by uclement          #+#    #+#             */
-/*   Updated: 2022/11/21 17:26:21 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:38:15 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int x)
 {

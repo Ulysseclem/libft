@@ -6,11 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 10:54:02 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 13:52:40 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:37:56 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

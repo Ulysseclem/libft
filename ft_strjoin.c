@@ -6,12 +6,10 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 09:51:04 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 11:45:17 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:37:26 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

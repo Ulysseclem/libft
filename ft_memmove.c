@@ -6,11 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 14:31:05 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 12:37:15 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:36:39 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

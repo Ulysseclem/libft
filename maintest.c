@@ -6,19 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:19:32 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 14:11:04 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:38:26 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <strings.h>
-#include <stdio.h>
 #include "libft.h"
-#include <ctype.h>
-#include <stddef.h>
-#include <stdlib.h>
-
-
 
 int	main()
 {

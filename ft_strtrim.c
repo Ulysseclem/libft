@@ -6,11 +6,10 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 10:39:01 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 11:45:55 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:32:28 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	to_search(char c, const char *set)
@@ -34,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 	int		i;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	i_start = 0;
 	while (to_search(s1[i_start], set) == 1)

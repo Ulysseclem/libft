@@ -6,11 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 09:30:06 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 14:22:03 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:38:00 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

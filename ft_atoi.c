@@ -6,9 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 13:40:15 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 11:51:26 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:41:44 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char*nptr)
 {

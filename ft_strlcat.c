@@ -6,36 +6,27 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 14:44:15 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 11:45:20 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:43:15 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	s_dest;
+	size_t	len;
 	size_t	i;
-	size_t	s_src;
 
-	s_src = 0;
-	s_dest = 0;
+	if (size <= ft_strlen(dst))
+		return (size + ft_strlen(src));
+	len = ft_strlen(dst);
 	i = 0;
-	if (dest == NULL && size == 0)
-		return (0);
-	while (src[s_src])
-		s_src++;
-	while (dest[s_dest])
-		s_dest++;
-	if (size == 0)
-		return (s_src);
-	else if (size <= s_dest)
-		return (size + s_src);
-	while (src[i] && (size - 1) > (i + s_dest))
+	while (src[i] != '\0' && len + 1 < size)
 	{
-		dest[s_dest + i] = src[i];
+		dst[len] = src[i];
+		len++;
 		i++;
 	}
-	dest[s_dest + i] = '\0';
-	return (s_src + s_dest);
+	dst[len] = '\0';
+	return (ft_strlen(dst) + ft_strlen(&src[i]));
 }

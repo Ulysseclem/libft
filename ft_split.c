@@ -6,85 +6,96 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:43:36 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 14:35:19 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/13 16:55:41 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-static int	sep(char str, char c)
-{
-	if (str == c)
-		return (1);
-	else
-		return (0);
-}
-
-static int	counting(const char *s, char c)
+static int	ft_check_word(char const *s, char c)
 {
 	int	i;
-	int	count;
+	int	j;
 
+	j = 0;
 	i = 0;
-	count = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		while (s[i] == c && s[i])
+		while (s[i] == c)
 			i++;
-		if (s[i])
-			count++;
-		while (s[i] != c && s[i])
+		if (s[i] != '\0')
+			j++;
+		while (s[i] != '\0' && s[i] != c)
 			i++;
 	}
-	return (count);
+	return (j);
 }
 
-static char	*split_strdup(const char *s, int start, int end)
+static int	ft_size_word(char const *s, char c)
 {
-	char	*dest;
-	size_t	i;
+	int	i;
 
 	i = 0;
-	dest = malloc(sizeof(char) * (end - start + 1));
-	if (!dest)
-		return (NULL);
-	while (start < end)
-	{
-		dest[i] = s[start];
+	while (s[i] != c && s[i])
 		i++;
-		start++;
+	return (i);
+}
+
+static char	*ft_cop(char const *s, int i, char c)
+{
+	char	*res;
+	int		k;
+
+	k = 0;
+	res = malloc(ft_size_word(&s[i], c) * sizeof(char) + 1);
+	if (!res)
+		return (NULL);
+	while (s[i] != c && s[i])
+	{
+		res[k] = s[i];
+		k++;
+		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	res[k] = '\0';
+	return (res);
+}
+
+void	*ft_free(char **res, int n)
+{
+	while (n >= 0)
+	{
+		free(res[n]);
+		n--;
+	}
+	free(res);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**tab;
-	int		count;
+	char	**res;
 	int		i;
-	int		start;
-	int		x;
+	int		j;
 
-	start = 0;
-	x = 0;
+	j = 0;
 	i = 0;
-	count = counting(s, c);
-	tab = malloc(sizeof(char *) * count + 1);
-		if (!tab)
+	if (!s)
 		return (NULL);
-	tab[count] = NULL;
-	while (x < count)
+	res = malloc((ft_check_word(s, c) + 1) * sizeof(char *));
+	if (!res)
+		return (NULL);
+	while (i < (int)ft_strlen(s))
 	{
-		while (sep(s[i], c) == 1)
-			i++;
-		start = i;
-		while (sep(s[i], c) == 0)
-			i++;
-		tab[x] = split_strdup(s, start, i);
-		x++;
+		if (s[i] != c && s[i])
+		{
+			res[j] = ft_cop(s, i, c);
+			if (!res[j])
+				return (ft_free(res, j));
+			i = i + ft_strlen(res[j]);
+			j++;
+		}
+		i++;
 	}
-	return (tab);
+	res[j] = 0;
+	return (res);
 }
