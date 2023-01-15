@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 15:08:02 by ulysse            #+#    #+#             */
-/*   Updated: 2023/01/13 16:43:16 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/15 13:47:04 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i])
 	{
-		f(i, s + i);
+		f(i, &s[i]);
 		i++;
 	}
 }

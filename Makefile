@@ -6,7 +6,7 @@
 #    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2023/01/13 17:18:09 by uclement         ###   ########.fr        #
+#    Updated: 2023/01/15 14:21:40 by uclement         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,3 @@ fclean : clean
 re : fclean all
 
 .PHONY: all clean fclean re
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)

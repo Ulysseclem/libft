@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 14:37:26 by uclement          #+#    #+#             */
-/*   Updated: 2023/01/13 16:38:43 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/15 12:25:24 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,3 @@ char	*ft_itoa(int nb)
 	str = ft_modulo(n, str, neg);
 	return (ft_rev(str));
 }
-// #include <stdio.h>
-// int	main()
-// {
-// 	printf("%s", ft_itoa(-0));
-// }

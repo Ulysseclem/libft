@@ -6,13 +6,23 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 12:43:36 by uclement          #+#    #+#             */
-/*   Updated: 2023/01/13 16:55:41 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/15 13:39:36 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_check_word(char const *s, char c)
+static int	ft_size(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i])
+		i++;
+	return (i);
+}
+
+static int	ft_count(char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -31,49 +41,39 @@ static int	ft_check_word(char const *s, char c)
 	return (j);
 }
 
-static int	ft_size_word(char const *s, char c)
+static char	*ft_cut(char const *s, int i, char c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c && s[i])
-		i++;
-	return (i);
-}
-
-static char	*ft_cop(char const *s, int i, char c)
-{
-	char	*res;
+	char	*str;
 	int		k;
 
 	k = 0;
-	res = malloc(ft_size_word(&s[i], c) * sizeof(char) + 1);
-	if (!res)
+	str = malloc(ft_size(&s[i], c) * sizeof(char) + 1);
+	if (!str)
 		return (NULL);
 	while (s[i] != c && s[i])
 	{
-		res[k] = s[i];
+		str[k] = s[i];
 		k++;
 		i++;
 	}
-	res[k] = '\0';
-	return (res);
+	str[k] = '\0';
+	return (str);
 }
 
-void	*ft_free(char **res, int n)
+void	*ft_free(char **str, int n)
 {
 	while (n >= 0)
 	{
-		free(res[n]);
+		free(str[n]);
 		n--;
 	}
-	free(res);
+	free(str);
 	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**res;
+	char	**str;
 	int		i;
 	int		j;
 
@@ -81,21 +81,21 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	if (!s)
 		return (NULL);
-	res = malloc((ft_check_word(s, c) + 1) * sizeof(char *));
-	if (!res)
+	str = malloc((ft_count(s, c) + 1) * sizeof(char *));
+	if (!str)
 		return (NULL);
-	while (i < (int)ft_strlen(s))
+	while ((size_t)i < ft_strlen(s))
 	{
 		if (s[i] != c && s[i])
 		{
-			res[j] = ft_cop(s, i, c);
-			if (!res[j])
-				return (ft_free(res, j));
-			i = i + ft_strlen(res[j]);
+			str[j] = ft_cut(s, i, c);
+			if (!str[j])
+				return (ft_free(str, j));
+			i = i + ft_strlen(str[j]);
 			j++;
 		}
 		i++;
 	}
-	res[j] = 0;
-	return (res);
+	str[j] = 0;
+	return (str);
 }

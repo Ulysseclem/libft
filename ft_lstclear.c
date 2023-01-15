@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 12:49:48 by uclement          #+#    #+#             */
-/*   Updated: 2023/01/13 17:54:37 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/15 14:13:38 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void(*del)(void *))
 {
 	t_list	*tmp;
 
-	if (!lst || !del)
+	if (!lst || !del || !*lst)
 		return ;
 	while (*lst)
 	{

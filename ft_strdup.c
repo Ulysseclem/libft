@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:40:20 by uclement          #+#    #+#             */
-/*   Updated: 2023/01/13 16:37:18 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/15 13:45:41 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	i = 0;
-	dest = malloc(sizeof(char) * ft_strlen((char *)s) + 1);
+	dest = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!dest)
 		return (NULL);
 	while (s[i])

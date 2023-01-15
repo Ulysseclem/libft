@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ulysse <ulysse@student.42.fr>              +#+  +:+       +#+        */
+/*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:05:54 by ulysse            #+#    #+#             */
-/*   Updated: 2022/12/15 14:33:18 by ulysse           ###   ########.fr       */
+/*   Updated: 2023/01/15 13:27:10 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &ln, 1);
 	}
 }
-// int main ()
-// {
-// 	ft_putnbr_fd(-2147483648);
-// }
