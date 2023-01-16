@@ -6,12 +6,11 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:40:20 by uclement          #+#    #+#             */
-/*   Updated: 2023/01/15 13:45:41 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/16 10:35:39 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <string.h>
 
 char	*ft_strdup(const char *s)
 {

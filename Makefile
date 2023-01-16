@@ -6,7 +6,7 @@
 #    By: uclement <uclement@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:28:28 by uclement          #+#    #+#              #
-#    Updated: 2023/01/15 14:21:40 by uclement         ###   ########.fr        #
+#    Updated: 2023/01/16 10:51:48 by uclement         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,6 @@ BONUS_O = $(BONUS:%.c=%.o)
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
-
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 15:21:43 by uclement          #+#    #+#             */
-/*   Updated: 2023/01/13 16:38:36 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/16 11:14:02 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 	size_t	size_max;
 
-	size_max = -1;
+	size_max = nmemb * size;
 	if (!nmemb || !size)
 		return (ft_calloc(1, 1));
-	if (nmemb > size_max / size)
+	if (nmemb != size_max / size)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	return ((void *)ptr);
 }

@@ -6,13 +6,15 @@
 /*   By: uclement <uclement@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 16:55:05 by uclement          #+#    #+#             */
-/*   Updated: 2022/12/09 11:49:40 by uclement         ###   ########.fr       */
+/*   Updated: 2023/01/16 11:17:41 by uclement         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else if (c >= 'a' && c <= 'z')
 		return (1);
 	else
 		return (0);
